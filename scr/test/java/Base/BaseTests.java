@@ -15,6 +15,7 @@ public class BaseTests {
         driver.manage().window().setSize(new Dimension(375, 812));
         System.out.println(driver.getTitle());
         driver.quit();
+        System.out.println("Hello World!");
     }
 
     public static void main(String[] arg) {
