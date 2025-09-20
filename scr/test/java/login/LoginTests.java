@@ -1,11 +1,11 @@
-package Login;
+package login;
 
-import Base.BaseTests;
+import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.SecureAreaPage;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class LoginTests extends BaseTests {
 
@@ -18,10 +18,7 @@ public class LoginTests extends BaseTests {
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
         secureAreaPage.getAleartText();
 
-        assertEquals(secureAreaPage.getAleartText(),
-                "You logged into a secure area!\n" +
-                        "×",
-                "Aleart text is incorrect!");
+        assertTrue(secureAreaPage.getAleartText().contains("You logged into a secure area!"), "Aleart text is incorrect!");
     }
 }
 

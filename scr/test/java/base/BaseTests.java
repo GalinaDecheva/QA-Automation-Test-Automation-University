@@ -1,6 +1,5 @@
-package Base;
+package base;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -25,7 +24,7 @@ public class BaseTests {
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
